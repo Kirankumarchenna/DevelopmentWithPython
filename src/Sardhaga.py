@@ -1,5 +1,12 @@
-from random import randint
+import datetime
 
-for i in range(4):
-    print('Your OTP is: ', randint(0, 9), randint(0, 9), randint(0, 9), randint(0, 9))
+input_value = "1713312000000"
 
+if input_value is not None:
+    try:
+        input_value = int(input_value)
+        print(datetime.datetime.utcfromtimestamp(input_value / 1000))
+    except ValueError:
+        print(input_value)
+else:
+    print(None)

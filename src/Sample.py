@@ -1,13 +1,21 @@
 import datetime
 
 
-input_value = "2024-04-17 00:00:00"
+                                                                                                # input Values:
+                                                                                                # 1713312000000   "2024-04-17 00:00:00"
+                                                                                                #
+                                                                                                # Cases:
+                                                                                                # 1) Int value convert to human readable time format
+                                                                                                # 2) String value conversion to Human readable time format
+                                                                                                # 3) None value to be return none
+                                                                                                # 4) If parsing fails then it should return original value
+
+input_value = "1713312000000"
 
 if input_value is None:
     print(None)
 
 if input_value is not None:
-    if input_value is not isinstance(input_value, int):
         try:
             input_value = int(input_value)
             if isinstance(input_value, int):
@@ -16,3 +24,5 @@ if input_value is not None:
                 print(input_value)
         except:
             print(input_value)
+else:
+    print (None)
