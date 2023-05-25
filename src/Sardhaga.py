@@ -1,12 +1,4 @@
-import datetime
+accountNum = input("Enter your input: ")
 
-input_value = "1713312000000"
+print(accountNum)
 
-if input_value is not None:
-    try:
-        input_value = int(input_value)
-        print(datetime.datetime.utcfromtimestamp(input_value / 1000))
-    except ValueError:
-        print(input_value)
-else:
-    print(None)
